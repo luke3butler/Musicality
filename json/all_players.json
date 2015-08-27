@@ -147,6 +147,13 @@
         "open_page" : "http://www.rdio.com"
     },
 
+    "Reddit Music Player" : {
+        "simple_name" : "reddit_music_player",
+        "pattern" : "https?:\\/\\/(.*?)\\.musicplayer\\.io\\/*",
+        "json_loc" : "/json/redditmusicplayer.json",
+        "open_page" : "http://reddit.musicplayer.io"
+    },
+
     "Saavn" : {
         "simple_name" : "saavn",
         "pattern" : "https?:\\/\\/www\\.saavn.com\\/*",

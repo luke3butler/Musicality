@@ -1,0 +1,37 @@
+{
+
+    "name" : "Reddit Music Player",
+
+"COMMENT_1" : "This block contiains all of the things a player may or may not have",
+
+    "has_thumbs_up" : false,
+    "has_thumbs_down" : false,
+    "has_next_track" : true,
+    "has_prev_track" : true,
+    "has_play_pause" : true,
+    "has_shuffle" : false,
+    "has_repeat" : false,
+    "has_current_track_time" : true,
+    "has_total_track_time" : true,
+    "has_remaining_track_time" : false,
+
+"COMMENT_2" : "This block contains all boolean values we can get back from the player",
+
+    "isPlaying" : "$('.ui.controls.menu .play.button').hasClass('active')",
+    "isPaused" : "$('.ui.controls.menu .play.button').hasClass('active') == false",
+
+"COMMENT_3" : "This block contains all string values we can get back from the player",
+    
+    "artUrl" : " if(newart = $('.music.playlist .ui.item.active .thumbnail').attr('src')) { 'http:' + newart; } else { 'https://upload.wikimedia.org/wikipedia/commons/a/a0/Google_favicon_2012.jpg'; }",
+    "artist" : "$('.music.playlist .ui.item.active .content .title').text().split('--')[0]",
+    "track" : "if(newsong = $('.music.playlist .ui.item.active .content .title').text().split('--')[1]) { newsong; } else { $('.music.playlist .ui.item.active .content .title').text() }",
+    "currentTime" : "$('.ui.controls.menu .item.start.time').text()",
+    "totalTime" : "$('.ui.controls.menu .item.end.time').text()",
+
+"COMMENT_4" : "Finally, this block contains info on how to perform actions",
+
+    "click_play" : "$('.ui.controls.menu .play.button').click()",
+    "click_pause" : "$('.ui.controls.menu .play.button.active').click()",
+    "click_next_track" : "$('.ui.controls.menu .forward.button').click()",
+    "click_prev_track" : "$('.ui.controls.menu .backward.button').click()"
+}
